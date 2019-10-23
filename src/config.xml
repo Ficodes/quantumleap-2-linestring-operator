@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FICODES" name="QuantumLeap-2-LineString-operator" version="0.1.1">
+
+    <license>Apache License 2.0</license>
+    <licenseurl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseurl>
+
+    <details>
+        <title>QuantumLeap to LineString operator</title>
+        <homepage>https://github.com/mjimenez/QuantumLeap-2-LineString</homepage>
+        <authors>Miguel Jiménez &lt;mjimenez@conwet.com&gt;</authors>
+        <email>mjimenez@conwet.com</email>
+        <image></image>
+        <smartphoneimage></smartphoneimage>
+        <description>This operator receives a response from QuantumLeap containing location data about an entity and generates a GeoJSON LineString object that represents the received location. It is based on geographical information coming in a location attribute, such as it is done on FIWARE Data Models.</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>GPLv2</license>
+        <issuetracker>https://github.com/mjimenez/QuantumLeap-2-LineString/issues</issuetracker>
+    </details>
+
+    <requirements>
+        <!-- Add any extra requirements here -->
+        <!-- <feature name="${feature-name}" /> -->
+    </requirements>
+
+    <preferences>
+    </preferences>
+
+    <wiring>
+        <inputendpoint name="historyInput" type="text" label="Historical Information" description="Historical Information" friendcode="qlhistory" />
+        <outputendpoint name="route" label="Route Entity" type="text" friendcode="poi-list" />
+        <outputendpoint name="previous" label="Previous Route Entity" type="text" friendcode="poi-list" />
+    </wiring>
+
+    <scripts>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
